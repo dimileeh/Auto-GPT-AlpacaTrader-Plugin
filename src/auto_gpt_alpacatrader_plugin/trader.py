@@ -190,7 +190,7 @@ class Trader():
                 ticker = yf.Ticker(symbol)
                 today_data = ticker.history(period='1d')
                 if len(today_data['Close']) > 0:
-                    current_close = today_data['Close'][0]
+                    current_close = today_data['Close'].iloc[0]
                     if previous_close is not None:
                         self.price_changes[symbol] = ((current_close - previous_close) / previous_close) * 100
                     self.current_prices[symbol] = current_close
