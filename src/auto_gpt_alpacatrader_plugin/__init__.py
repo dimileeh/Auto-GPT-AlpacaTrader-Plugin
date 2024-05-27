@@ -56,7 +56,7 @@ class AutoGPTAlpacaTraderPlugin(AutoGPTPluginTemplate):
         prompt.add_command(
             "Get stock news",
             "get_stock_news",
-            {"symbol": "<symbol>",},
+            {"symbol": "string",},
             self.cli.get_sym_news
         ),
         prompt.add_command(
@@ -75,11 +75,11 @@ class AutoGPTAlpacaTraderPlugin(AutoGPTPluginTemplate):
             "Place Trade",
             "place_trade",
             {
-                "symbol": "<symbol>",
-                "quantity": "<quantity>",
-                "side" :"<side>" ,
-                "order_type":"<order_type>",
-                "time_in_force":"<time_in_force>"
+                "symbol": "string",
+                "quantity": "number",
+                "side" :"string" ,
+                "order_type":"string",
+                "time_in_force":"string"
             },
             self.cli.place_trade
         )
