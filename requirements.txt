@@ -10,6 +10,6 @@ twine
 pandas
 numpy
 ta
-alpaca-py
+alpaca-py==0.10.0
 requests
 
