@@ -12,4 +12,5 @@ numpy
 ta
 alpaca-py==0.10.0
 requests
-
+datapackage==1.15.4
+yfinance==0.2.40
