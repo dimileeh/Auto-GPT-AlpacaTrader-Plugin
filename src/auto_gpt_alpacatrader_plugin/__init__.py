@@ -30,50 +30,50 @@ class AutoGPTAlpacaTraderPlugin(AutoGPTPluginTemplate):
 
     def post_prompt(self, prompt: PromptGenerator) -> PromptGenerator:
         prompt.add_command(
-            "Close All Trades",
             "close_all_trades",
+            "Close All Trades",
             {},
             self.cli.close_all_trades
         ),
         prompt.add_command(
-            "Get Account Information",
             "get_account_information",
+            "Get Account Information",
             {},
             self.cli.get_account_information
         ),
         prompt.add_command(
-            "Get top movers",
             "get_top_movers",
+            "Get top movers",
             {},
             self.cli.get_large_movers
         ),
         prompt.add_command(
-            "Get stock ideas",
             "get_ideas",
+            "Get stock ideas",
             {},
             self.cli.get_ideas
         ),
         prompt.add_command(
-            "Get stock news",
             "get_stock_news",
+            "Get stock news",
             {"symbol": "string",},
             self.cli.get_sym_news
         ),
         prompt.add_command(
-            "Get market sentiment",
             "get_market_sentiment",
+            "Get market sentiment",
             {},
             self.cli.get_market_sentiment
         ),
         prompt.add_command(
-            "Get Positions",
             "get_positions",
+            "Get Positions",
             {},
             self.cli.get_positions
         ),
         prompt.add_command(
-            "Place Trade",
             "place_trade",
+            "Place Trade",
             {
                 "symbol": "string",
                 "quantity": "number",
